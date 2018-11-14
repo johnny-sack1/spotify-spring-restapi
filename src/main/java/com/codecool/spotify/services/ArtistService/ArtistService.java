@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Service
 public class ArtistService {
@@ -17,7 +18,15 @@ public class ArtistService {
         return artistRepository.findAll();
     }
 
-    public Optional<Artist> getArtistById(int id) {
+    public Optional<Artist> getArtistById(Long id) {
         return artistRepository.findById(id);
+    }
+
+    public void save(Artist artist) {
+        artistRepository.save(artist);
+    }
+
+    public Optional<Artist> findByName(String name) {
+        return artistRepository.findByName(name);
     }
 }

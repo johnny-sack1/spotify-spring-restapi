@@ -9,5 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ArtistRepository extends JpaRepository<Artist, Long> {
     List<Artist> findAll();
-    Optional<Artist> findById(int id);
+    Optional<Artist> findById(Long id);
+    Optional<Artist> findByName(String name);
 }
