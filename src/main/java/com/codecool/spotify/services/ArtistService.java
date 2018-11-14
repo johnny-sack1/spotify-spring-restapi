@@ -14,20 +14,16 @@ public class ArtistService {
     @Autowired
     private ArtistRepository artistRepository;
 
-    public List<Artist> getAll() {
+    public List<Artist> findAll() {
         return artistRepository.findAll();
     }
 
-    public Optional<Artist> getArtistById(Long id) {
+    public Optional<Artist> findById(Long id) {
         return artistRepository.findById(id);
     }
 
     public Artist save(Artist artist) {
         return artistRepository.save(artist);
-    }
-
-    public Optional<Artist> findByName(String name) {
-        return artistRepository.findByName(name);
     }
 
     public void deleteById(long id) {
