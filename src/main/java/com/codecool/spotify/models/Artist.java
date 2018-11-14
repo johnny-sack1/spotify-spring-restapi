@@ -10,14 +10,16 @@ public class Artist {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @JsonIgnore
-    private int id;
+    private Long id;
     private String name;
 
-    public int getId() {
+    public Artist() {}
+
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -27,5 +29,9 @@ public class Artist {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override public String toString() {
+        return (this.name);
     }
 }
