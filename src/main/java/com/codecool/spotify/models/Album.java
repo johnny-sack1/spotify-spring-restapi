@@ -9,11 +9,34 @@ public class Album {
     private long id;
     private int price;
     private String title;
+    private Artist artist;
+    private int genre_id;
 
-    public Album(long id, int price, String title) {
+    @Column(name = "genre_id")
+    public int getGenre_id() {
+        return genre_id;
+    }
+
+    public void setGenre_id(int genre_id) {
+        this.genre_id = genre_id;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "artist_id")
+    public Artist getArtist() {
+        return artist;
+    }
+
+    public void setArtist(Artist artist) {
+        this.artist = artist;
+    }
+
+    public Album(long id, int price, String title, Artist artist, int genre_id) {
         this.id = id;
         this.price = price;
         this.title = title;
+        this.artist = artist;
+        this.genre_id = genre_id;
     }
 
     public Album() {}
