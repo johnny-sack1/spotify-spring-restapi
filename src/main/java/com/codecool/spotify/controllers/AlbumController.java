@@ -1,6 +1,5 @@
 package com.codecool.spotify.controllers;
 
-import com.codecool.spotify.exceptions.AlbumNotFoundException;
 import com.codecool.spotify.models.Album;
 import com.codecool.spotify.repositories.AlbumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ public class AlbumController {
 
     @GetMapping("/albums/{id}")
     public Album one(@PathVariable long id) {
-        return repository.findById(id).orElseThrow(() -> new AlbumNotFoundException(id));
+        return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     @PostMapping(value = "/albums")

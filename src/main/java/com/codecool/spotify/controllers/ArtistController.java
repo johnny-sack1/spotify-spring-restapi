@@ -1,7 +1,7 @@
 package com.codecool.spotify.controllers;
 
-import com.codecool.spotify.model.Artist;
-import com.codecool.spotify.service.ArtistService.ArtistService;
+import com.codecool.spotify.models.Artist;
+import com.codecool.spotify.services.ArtistService.ArtistService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
