@@ -1,4 +1,4 @@
-package com.codecool.spotify.services.ArtistService;
+package com.codecool.spotify.services;
 
 import com.codecool.spotify.models.Artist;
 import com.codecool.spotify.repositories.ArtistRepository;
