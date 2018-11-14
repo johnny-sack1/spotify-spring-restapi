@@ -22,11 +22,15 @@ public class ArtistService {
         return artistRepository.findById(id);
     }
 
-    public void save(Artist artist) {
-        artistRepository.save(artist);
+    public Artist save(Artist artist) {
+        return artistRepository.save(artist);
     }
 
     public Optional<Artist> findByName(String name) {
         return artistRepository.findByName(name);
+    }
+
+    public void deleteById(long id) {
+        artistRepository.deleteById(id);
     }
 }
