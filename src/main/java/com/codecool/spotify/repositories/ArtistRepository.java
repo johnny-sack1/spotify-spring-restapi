@@ -7,8 +7,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ArtistRepository extends JpaRepository<Artist, Long> {
-    List<Artist> findAll();
-    Optional<Artist> findById(Long id);
-    Optional<Artist> findByName(String name);
-}
+public interface ArtistRepository extends JpaRepository<Artist, Long> {}
